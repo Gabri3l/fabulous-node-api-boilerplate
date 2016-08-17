@@ -7,7 +7,8 @@
     "commit": "git-cz",
     "start": "NODE_ENV=production node index.js",
     "watch": "nodemon index.js",
-    "build": "babel src -d dist --presets es2015"
+    "build": "babel path_to_src -d dist --presets es2015",
+    "test": "set NODE_ENV=testing&& mocha path_to_test/tests.js --compilers js:babel-register || exit 0"
   },
   "author": "Name Lastname",
   "license": "ISC",
@@ -21,7 +22,8 @@
     "eslint-config-airbnb": "^9.0.1",
     "eslint-config-google": "^0.6.0",
     "eslint-loader": "^1.4.1",
-    "mocha": "^2.5.3"
+    "mocha": "^2.5.3",
+    "supertest": "^1.2.0"
   },
   "config": {
     "commitizen": {
