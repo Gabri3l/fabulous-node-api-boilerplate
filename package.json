@@ -23,7 +23,7 @@
     "eslint-config-google": "^0.6.0",
     "eslint-loader": "^1.4.1",
     "mocha": "^2.5.3",
-    "nodemon": "^1.10.0"
+    "nodemon": "^1.10.0",
     "supertest": "^1.2.0"
   },
   "config": {
