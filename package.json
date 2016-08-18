@@ -6,11 +6,11 @@
   "scripts": {
     "commit": "git-cz",
     "start": "NODE_ENV=production node index.js",
-    "watch": "nodemon index.js",
+    "watch": "nodemon index.js --exec babel-node --presets es2015",
     "build": "babel path_to_src -d dist --presets es2015",
     "test": "set NODE_ENV=testing&& mocha path_to_test/tests.js --compilers js:babel-register || exit 0"
   },
-  "author": "Name Lastname",
+  "author": "Gabriele Cimato <gabriele.cimato@gmail.com>",
   "license": "ISC",
   "devDependencies": {
     "babel": "^6.5.2",
@@ -23,6 +23,7 @@
     "eslint-config-google": "^0.6.0",
     "eslint-loader": "^1.4.1",
     "mocha": "^2.5.3",
+    "nodemon": "^1.10.0"
     "supertest": "^1.2.0"
   },
   "config": {
