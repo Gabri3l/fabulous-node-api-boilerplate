@@ -6,4 +6,59 @@ This boilerplate aims to build a tool to quickly setup a simple API with Node, p
 
 # Getting Started
 
-TBD
+In order to get up and running with this boilerplate, you can follow the usual steps from the terminal. Most of these steps can be ran from inside the project folder, I will specify the correct path otherwise.
+
+1. **Clone repo**
+
+  `git clone https://github.com/Gabri3l/fabulous-node-api-boilerplate`
+
+2. **Install dependencies**
+
+  `npm run setup` or `npm install`
+
+3. **Run your local MongoDB**
+
+  Depending on your OS there are different way to start the db locally, the command is generally:
+
+  ``mongod``
+
+  TBC
+
+4. **Run development server**
+
+  This will start your server locally but it will require you to restart manually if you make any change to your API.
+
+  `npm run start`
+
+  Otherwise you can run a different scripts that utilizes `nodemon` and will refresh the local server for each edit you save on your code. This feature is extremely useful in development.
+
+  `npm run watch`
+
+  In both cases the server will be running at `http://localhost:8080/`
+
+### File Structure
+
+
+```
+.
+├── README.md
+├── index.js
+├── package.json
+├── server/
+|   ├── api/
+|   ├── middleware/
+|   |   ├── appMiddleware.js
+|   ├── config/
+|   |   ├── routesBlueprint.json
+|   |   ├── config.js
+|   |   ├── development.js
+|   |   ├── production.js
+|   |   ├── testing.js
+|   ├── test/
+|   |   ├── testSuite.js
+|   ├── util/
+|   |   ├── logger.js
+|   ├── server.js
+├── .gitattributes
+└── .gitignore
+```

@@ -2,7 +2,7 @@ const config = {
   dev: 'development',
   test: 'testing',
   prod: 'production',
-  port: process.env.PORT || 9000
+  port: process.env.PORT || 8080
 };
 
 process.env.NODE_ENV = process.env.NODE_ENV || config.dev;
