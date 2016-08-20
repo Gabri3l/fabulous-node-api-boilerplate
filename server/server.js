@@ -14,7 +14,7 @@ mongoose.Promise = global.Promise;
 require('./middleware/appMiddleware')(app);
 
 // setup the api
-app.use('/api/v2/', api);
+app.use('/api', api);
 
 // export the app for testing
 module.exports = app;
