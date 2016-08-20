@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "commit": "git-cz",
-    "start": "NODE_ENV=production node index.js",
+    "start": "set NODE_ENV=production&& node index.js",
     "watch": "nodemon index.js --exec babel-node --presets es2015",
     "build": "babel path_to_src -d dist --presets es2015",
     "test": "set NODE_ENV=testing&& mocha path_to_test/tests.js --compilers js:babel-register || exit 0"
