@@ -26,15 +26,11 @@ In order to get up and running with this boilerplate, you can follow the usual s
 
 4. **Run development server**
 
-  This will start your server locally but it will require you to restart manually if you make any change to your API.
-
-  `npm run start`
-
-  Otherwise you can run a different scripts that utilizes `nodemon` and will refresh the local server for each edit you save on your code. This feature is extremely useful in development.
+  This will run a script that utilizes `nodemon` and will refresh the local server for each edit saved on your API.
 
   `npm run watch`
 
-  In both cases the server will be running at `http://localhost:8080/`
+  The development server will be running at `http://localhost:8080/`
 
 ### File Structure
 
