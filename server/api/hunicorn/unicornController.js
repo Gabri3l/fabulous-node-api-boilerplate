@@ -1,18 +1,18 @@
-import Hunicorn from './hunicornModel';
+import Hunicorn from './unicornModel';
 import logger from '../../util/logger';
 
 const params = (req, res, next, id) => {
-  logger.log('Hitting hunicorn middleware');
+  logger.log('Hitting unicorn middleware');
   Hunicorn.findById(id)
-    .then((hunicorn) => {
-      if (!hunicorn) {
+    .then((unicorn) => {
+      if (!unicorn) {
         res.status(400).json({
           error: {
-            message: 'No hunicorn with that id'
+            message: 'No unicorn with that id'
           }
         });
       } else {
-        req.hunicorn = hunicorn;
+        req.unicorn = unicorn;
         next();
       }
     })
@@ -23,8 +23,8 @@ const params = (req, res, next, id) => {
 
 const get = (req, res, next, next) => {
   Hunicorn.find({})
-    .then((hunicorns) => {
-      res.json(hunicorns);
+    .then((unicorns) => {
+      res.json(unicorns);
     })
     .catch((err) => {
       next(err);
@@ -32,18 +32,18 @@ const get = (req, res, next, next) => {
 };
 
 const getOne = (req, res) => {
-  const hunicorn = req.hunicorn;
-  res.json(hunicorn);
+  const unicorn = req.unicorn;
+  res.json(unicorn);
 };
 
 const post = (req, res, next) => {
   const newHunicorn = req.body;
   Hunicorn.create(newHunicorn)
-  .then((hunicorn) => {
+  .then((unicorn) => {
     res.status(201).json({
       success: {
-        message: 'New hunicorn created successfully',
-        data: hunicorn
+        message: 'New unicorn created successfully',
+        data: unicorn
       }
     });
   })
@@ -53,11 +53,11 @@ const post = (req, res, next) => {
 };
 
 const put = (req, res, next) => {
-  const hunicorn = req.hunicorn;
+  const unicorn = req.unicorn;
   const update = req.body;
-  Object.assign(hunicorn, update);
+  Object.assign(unicorn, update);
 
-  hunicorn.save((err, saved) => {
+  unicorn.save((err, saved) => {
     if (err) {
       next(err);
     } else {
@@ -73,7 +73,7 @@ const put = (req, res, next) => {
 
 
 const del = (req, res, next) => {
-  req.hunicorn.remove((err, removed) => {
+  req.unicorn.remove((err, removed) => {
     if (err) {
       next(err);
     } else {

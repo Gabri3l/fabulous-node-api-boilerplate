@@ -1,5 +1,5 @@
 import express from 'express';
-import controller from './hunicornController';
+import controller from './unicornController';
 
 const router = express.Router();
 

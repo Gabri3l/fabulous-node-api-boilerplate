@@ -1,6 +1,6 @@
 import mongoose from 'mongoose';
 
-const HunicornSchema = mongoose.Schema({
+const UnicornSchema = mongoose.Schema({
   name: { type: String, required: true },
   color: { type: String, required: true },
   age: { type: Number, required: true },
@@ -10,4 +10,4 @@ const HunicornSchema = mongoose.Schema({
   }
 });
 
-module.exports = mongoose.model('hunicorn', HunicornSchema);
+module.exports = mongoose.model('unicorn', UnicornSchema);
