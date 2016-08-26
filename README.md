@@ -44,9 +44,14 @@ In order to get up and running with this boilerplate, you can follow the usual s
 |   ├── api/
 |   |   ├── horn
 |   |   |   ├──hornController.js
-|   |   |   ├──hornController.js
-|   |   |   ├──hornController.js
+|   |   |   ├──hornModel.js
+|   |   |   ├──hornRoutes.js
+|   |   |   ├──hornTests.js
 |   |   ├── unicorn
+|   |   |   ├──unicornController.js
+|   |   |   ├──unicornModel.js
+|   |   |   ├──unicornRoutes.js
+|   |   |   ├──unicornTests.js
 |   ├── middleware/
 |   |   ├── appMiddleware.js
 |   ├── config/
@@ -60,6 +65,8 @@ In order to get up and running with this boilerplate, you can follow the usual s
 |   ├── util/
 |   |   ├── logger.js
 |   ├── server.js
+├── .babelrc
+├── .eslintrc
 ├── .gitattributes
 └── .gitignore
 ```
