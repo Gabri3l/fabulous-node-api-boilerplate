@@ -1,9 +1,9 @@
-import Hunicorn from './unicornModel';
+import Unicorn from './unicornModel';
 import logger from '../../util/logger';
 
 const params = (req, res, next, id) => {
   logger.log('Hitting unicorn middleware');
-  Hunicorn.findById(id)
+  Unicorn.findById(id)
     .then((unicorn) => {
       if (!unicorn) {
         res.status(400).json({
@@ -22,7 +22,7 @@ const params = (req, res, next, id) => {
 };
 
 const get = (req, res, next) => {
-  Hunicorn.find({})
+  Unicorn.find({})
     .then((unicorns) => {
       res.json(unicorns);
     })
@@ -37,8 +37,8 @@ const getOne = (req, res) => {
 };
 
 const post = (req, res, next) => {
-  const newHunicorn = req.body;
-  Hunicorn.create(newHunicorn)
+  const newUnicorn = req.body;
+  Unicorn.create(newUnicorn)
   .then((unicorn) => {
     res.status(201).json({
       success: {
@@ -63,7 +63,7 @@ const put = (req, res, next) => {
     } else {
       res.json({
         success: {
-          message: 'Hunicorn updated with success',
+          message: 'Unicorn updated with success',
           data: saved
         }
       });
@@ -79,7 +79,7 @@ const del = (req, res, next) => {
     } else {
       res.json({
         success: {
-          message: 'Hunicorn deleted with success',
+          message: 'Unicorn deleted with success',
           data: removed
         }
       });
@@ -87,7 +87,7 @@ const del = (req, res, next) => {
   });
 };
 
-export default {
+module.exports = {
   params,
   get,
   getOne,
