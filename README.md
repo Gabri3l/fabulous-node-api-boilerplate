@@ -32,8 +32,9 @@ In order to get up and running with this boilerplate, you can follow the usual s
 
   The development server will be running at `http://localhost:9000/`
 
-### File Structure
+# File Structure
 
+This boilerplate follows a modularized directories structure. As many pointed out [LINK, LINK, LINK] there are pros and cons of such approach. If working on a small API it feels natural to group together models, then controllers and so on, but as the project grows you end up having few folders with many models or controllers files. This makes looking for something specific more intricate than it should be. Modularizing helps cope with that, you can consider each directory as a mini API and focus on one specific folder at a time.
 
 ```
 .
