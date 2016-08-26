@@ -21,7 +21,7 @@ const params = (req, res, next, id) => {
     });
 };
 
-const get = (req, res, next, next) => {
+const get = (req, res, next) => {
   Hunicorn.find({})
     .then((unicorns) => {
       res.json(unicorns);
@@ -87,7 +87,7 @@ const del = (req, res, next) => {
   });
 };
 
-module.exports = {
+export default {
   params,
   get,
   getOne,
