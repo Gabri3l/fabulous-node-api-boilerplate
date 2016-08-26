@@ -18,11 +18,11 @@ In order to get up and running with this boilerplate, you can follow the usual s
 
 3. **Run your local MongoDB**
 
-  Depending on your OS there are different way to start the db locally, the command is generally:
+  Depending on your OS there are different ways to start the db locally, the command is generally:
 
   ``mongod``
 
-  TBC
+  and you can run this from `C:\Program Files\MongoDB\Server\3.2\bin`. Once your local db is up and running you will be able to test the API either through the test suite or with other tools like [Posteman](https://www.getpostman.com/).
 
 4. **Run development server**
 
