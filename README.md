@@ -30,7 +30,7 @@ In order to get up and running with this boilerplate, you can follow the usual s
 
   `npm run watch`
 
-  The development server will be running at `http://localhost:8080/`
+  The development server will be running at `http://localhost:9000/`
 
 ### File Structure
 
@@ -42,6 +42,11 @@ In order to get up and running with this boilerplate, you can follow the usual s
 ├── package.json
 ├── server/
 |   ├── api/
+|   |   ├── horn
+|   |   |   ├──hornController.js
+|   |   |   ├──hornController.js
+|   |   |   ├──hornController.js
+|   |   ├── unicorn
 |   ├── middleware/
 |   |   ├── appMiddleware.js
 |   ├── config/
