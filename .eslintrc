@@ -11,6 +11,7 @@
     "eol-last": 0,
     "no-underscore-dangle": 0,
     "new-cap": 0,
-    "import/prefer-default-export": 0
+    "import/prefer-default-export": 0,
+    "linebreak-style": 0
   }
 }

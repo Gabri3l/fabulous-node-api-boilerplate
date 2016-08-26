@@ -1,7 +1,7 @@
 import express from 'express';
+import mongoose from 'mongoose';
 import api from './api/api';
 import config from './config/config';
-import mongoose from 'mongoose';
 import logger from './util/logger';
 
 const app = express();
